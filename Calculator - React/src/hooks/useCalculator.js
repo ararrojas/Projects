@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { evaluate } from 'mathjs'
 
-
 function useCalculator () {
 
     const [input, setInput] = useState('')
@@ -22,7 +21,7 @@ function useCalculator () {
         }
     } 
 
-    return input, handleClear, addInput, result
+    return [input, handleClear, addInput, result]
 }
 
 export default useCalculator
