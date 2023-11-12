@@ -1,8 +1,8 @@
 import Button from './components/Button'
 import Input from './components/Input'
 import ClearButton from './components/ClearButton'
-import './App.css'
 import useCalculator from './hooks/useCalculator'
+import './App.css'
 
 function App() {
 
