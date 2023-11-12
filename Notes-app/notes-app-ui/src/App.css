@@ -1,0 +1,111 @@
+body {
+  margin: 20px;
+  background-color: #10162f;
+}
+
+.app-container {
+  grid-template-columns: 1fr;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: minmax(250px, auto);
+  gap: 20px;
+}
+
+.note-item {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 0px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: rgb(0,0,0 / 0.5);
+  cursor: pointer;
+}
+
+.note-item:hover{
+  transform: translate(4px, -4px);
+}
+
+.notes-header {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #eafdc6;
+  border-radius: 5px;
+}
+
+.notes-header button {
+  font-size: 18px;
+  margin-right: 8px;
+  padding: 0px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  max-width: fit-content;
+}
+
+h2 {
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0;
+  padding: 5px 10px;
+  background-color: #eafdc6;
+}
+
+p {
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+textarea,
+input {
+  border-radius: 5px;
+  border: 2px solid black;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.note-form button {
+  background-color: #ffd300;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.note-form button:hover {
+  background-color: #cfae0f;
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 5px;
+  justify-content: space-evenly;
+}
+
+.edit-buttons button{
+  flex: 1;
+}
+
+.edit-buttons button:last-of-type{
+  background-color: #c40233;
+  color: white;
+}
+
+@media (min-width: 600px) {
+  .app-container{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+  }
+}
